@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_Letter" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cbedbcb0-d4fd-4291-ae1c-f111555d3db4">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM registro where condicion = 'ingreso']]>
+	</queryString>
+	<field name="idregistro" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idregistro"/>
+		<property name="com.jaspersoft.studio.field.label" value="idregistro"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="registro"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="fecha"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="registro"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="descripcion"/>
+		<property name="com.jaspersoft.studio.field.label" value="descripcion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="registro"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="condicion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="condicion"/>
+		<property name="com.jaspersoft.studio.field.label" value="condicion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="registro"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="monto" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="monto"/>
+		<property name="com.jaspersoft.studio.field.label" value="monto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="registro"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fondo_idfondo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="fondo_idfondo"/>
+		<property name="com.jaspersoft.studio.field.label" value="fondo_idfondo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="registro"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<sortField name="fecha"/>
+	<group name="idregistro">
+		<groupExpression><![CDATA[$F{idregistro}]]></groupExpression>
+	</group>
+	<group name="fecha">
+		<groupExpression><![CDATA[$F{fecha}]]></groupExpression>
+	</group>
+	<group name="descripcion">
+		<groupExpression><![CDATA[$F{descripcion}]]></groupExpression>
+	</group>
+	<group name="condicion">
+		<groupExpression><![CDATA[$F{condicion}]]></groupExpression>
+	</group>
+	<group name="monto">
+		<groupExpression><![CDATA[$F{monto}]]></groupExpression>
+	</group>
+	<group name="fondo_idfondo">
+		<groupExpression><![CDATA[$F{fondo_idfondo}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="140" y="24" width="280" height="30" uuid="5a8fbd8b-c38b-4c7c-8924-d9a0abe6ea11"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Reporte_Fondos_Ingresados"]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="461" y="20" width="100" height="30" uuid="e3d7f5ca-3b3c-49dd-989e-570525aaf4d9"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="100" height="30" uuid="fddaf10d-12ca-4b79-b905-309701e0cd54">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3bb15fe3-a4d1-4007-9189-97a9a4ce6dae"/>
+				</reportElement>
+				<text><![CDATA[idregistro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="10" width="80" height="30" uuid="35d5afb0-7f20-447b-9181-8d8fa53f7be9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b7e59887-2455-4a5b-b882-b05f8fb18a5d"/>
+				</reportElement>
+				<text><![CDATA[descripcion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="10" width="100" height="30" uuid="5a61ceb7-6869-4c46-b5d3-f07df62ec676">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2d2e1413-0008-42af-b0ee-645ad53f3a02"/>
+				</reportElement>
+				<text><![CDATA[monto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="10" width="100" height="30" uuid="dbf8f3e6-3831-416c-897a-cc40bb775ef2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9dec132f-e909-4fa5-853f-3a1d5bf21c87"/>
+				</reportElement>
+				<text><![CDATA[fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="10" width="100" height="30" uuid="e3c9aee4-8bdf-4382-9dfe-b390e5002fea">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="192d798d-9e0f-495a-9687-1eabb4133c6e"/>
+				</reportElement>
+				<text><![CDATA[condicion]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="66" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="100" height="30" uuid="ff77b331-aa73-4151-b134-8aafe50edc6a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3bb15fe3-a4d1-4007-9189-97a9a4ce6dae"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{idregistro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="10" width="150" height="30" uuid="8e65f02f-4950-4bda-9e3a-67602364177f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b7e59887-2455-4a5b-b882-b05f8fb18a5d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="10" width="100" height="30" uuid="ea8f7c74-9f9c-4355-bcff-b3bed88cd006">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2d2e1413-0008-42af-b0ee-645ad53f3a02"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{monto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="10" width="100" height="30" uuid="1f822c0a-dc20-4b6b-9970-ccb9efe25d34">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9dec132f-e909-4fa5-853f-3a1d5bf21c87"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="10" width="100" height="30" uuid="f482549a-2b09-4f41-834f-90958c77612f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="192d798d-9e0f-495a-9687-1eabb4133c6e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{condicion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="20" splitType="Stretch">
+			<line>
+				<reportElement x="-30" y="5" width="621" height="5" uuid="a9db4f29-7e6c-43b9-a7ee-3ac44f00c0d8"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="51" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

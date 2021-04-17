@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>g6</groupId>
+  <artifactId>hibernate-jpa</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <dependencies>
+  
+  
+  	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-agroal</artifactId>
+		<version>5.4.28.Final</version>
+		<type>pom</type>
+	</dependency>
+	
+  	<dependency>
+		  <groupId>javax.persistence</groupId>
+		  <artifactId>javax.persistence-api</artifactId>
+		  <version>2.2</version>
+	</dependency>
+	
+	<dependency>
+		  <groupId>org.hibernate</groupId>
+		  <artifactId>hibernate-entitymanager</artifactId>
+		  <version>5.4.28.Final</version>
+	</dependency>
+	
+	<dependency>
+		  <groupId>org.hibernate</groupId>
+		  <artifactId>hibernate-java8</artifactId>
+		  <version>5.4.28.Final</version>
+  	</dependency>
+  	
+  	<dependency>
+    	<groupId>mysql</groupId>
+    	<artifactId>mysql-connector-java</artifactId>
+    	<version>8.0.23</version>
+	</dependency>
+
+  </dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>15</source>
+					<target>15</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+  
+  
+</project>
